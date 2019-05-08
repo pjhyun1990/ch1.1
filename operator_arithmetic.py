@@ -19,3 +19,16 @@ print(t, type(t))
 
 a, b = divmod(2, 3)
 print(a, b)
+
+# 연산자 우선순위
+print(2 + 3 *4)
+print(-2 + 3 *4)
+print(-(2 + 3) *4)
+
+#결합순서
+print(2 ** 3 ** 4)
+print((2 ** 3) ** 4)
+print(2 ** (3 ** 4))
+
+
+
