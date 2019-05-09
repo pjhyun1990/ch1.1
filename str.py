@@ -93,8 +93,79 @@ print(s.find('like', 5))
 print(s.find('javascript'))
 print(s.rfind('like'))
 
+# 발견하지 못하면 예외가 발생한다.
+# print(s.index('javascript'))
+print(s.rindex("like"))
+print(s.startswith('I like'))
+print(s.startswith('I like', 2))
+print(s.endswith('Java', 0, 26))
+
+# 편집과 치환
+
+s = '      spam and ham     '
+print('=====' + s.strip() + '====')
+print('=====' + s.rstrip() + '====')
+print('=====' + s.lstrip() + '====')
+
+s = '<><abc><><defg><>'
+print('===' + s.strip('<>') + '===')
+
+s = 'Hello Java Java Java Java'
+print(s.replace('Java', 'Python'))
+
+# 정렬
+s = 'King and Queen'
+print('===' + s.center(60) + '===')
+print('===' + s.ljust(60) + '===')
+print('===' + s.rjust(60) + '===')
+
+s = 'spam and ham'
+r = s.split(' and ')
+# print(r.type(r))
+
+s = 'one:tow:three:four'
+r = s.split(':')
+print(r)
+
+r = s.split(':', 2)
+print(r)
 
 
+s = '&'.join(r)
+print(s)
 
 
+lines = """1st line
+2nd line
+3rd line
+4th line
+"""
 
+r = lines.split('\n')
+print(r)
+
+r = lines.splitlines()
+print(r)
+
+# 판별
+
+print("abcd".isupper())
+print("abcd".islower())
+print("  ".isspace())
+
+# 0 채우기
+print(str(1).zfill(5))
+print(str(9234).zfill(5))
+
+# formating (서식)
+f = "name.{}, age:{}"
+s = f.format("둘리", 10)
+print(s)
+
+f = "name:{1}, age:{0}"
+s = f.format(10, "둘리")
+print("name:{1}, age:{0}".format(10, "둘리"))
+print(s)
+
+f = 'name:{n}, age:{a}'
+s = f.format_map({"n": "둘리", "a": 10})
