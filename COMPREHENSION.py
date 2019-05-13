@@ -16,10 +16,11 @@ print(strings)
 
 
 # 1~ 100 사이에 3,6,9 가 있는 수 리스트 만들기
-result = [ num for num in range(1,101) if num % 10 == 3 ]
+result = [num for num in range(1, 101) if (num % 10 == 3 or num % 10 == 6 or num % 10 == 9)]
 
+print("=================")
 print(result)
-print("asdfaefawefwaef")
+print("=================")
 
 
 
